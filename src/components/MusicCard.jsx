@@ -5,7 +5,7 @@ export default class MusicCard extends React.Component {
   render() {
     const { allMusics } = this.props;
     return (
-      allMusics.filter((music) => music.wrapperType === 'track')
+      allMusics.filter((music) => music.trackId)
         .map(({ previewUrl, trackId, trackName }) => (
           <li key={ trackId }>
             <span>{trackName}</span>
