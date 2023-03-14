@@ -15,27 +15,6 @@ export default class MusicCard extends React.Component {
     this.setState(() => ({ songs: [...songsStorage], isLoading: false }));
   }
 
-  // fHandleChange = async ({ target: { name } }) => {
-  //   const { favoriteSongs } = this.state;
-  //   const copyFavoriteSongs = [...favoriteSongs];
-  //   const music = await getMusics(name);
-  //   const verifySong = favoriteSongs.filter((m) => m.trackId === music[0].trackId);
-  //   if (verifySong.length) {
-  //     const findInd = favoriteSongs.findIndex((s) => s.trackId === music[0].trackId);
-  //     copyFavoriteSongs.splice(findInd, 1);
-  //     console.log(copyFavoriteSongs);
-  //     this.setState(() => ({ favoriteSongs: [...copyFavoriteSongs], isLoading: true }));
-  //     localStorage.setItem('favorite_songs', JSON.stringify(copyFavoriteSongs));
-  //   } else {
-  //     this.setState((prev) => ({
-  //       favoriteSongs: [...prev.favoriteSongs, music[0]],
-  //       isLoading: true,
-  //     }));
-  //     await addSong(music[0]);
-  //   }
-  //   this.setState(() => ({ isLoading: false }));
-  // };
-
   fHandleChange = async (music) => {
     this.setState(() => ({ isLoading: true }));
     const { songs } = this.state;
