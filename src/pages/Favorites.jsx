@@ -21,24 +21,19 @@ export default class Favorites extends React.Component {
     this.setState(() => ({ songs: [...songs] }));
   }
 
-  returnFavorites = () => {
-    const { songs } = this.state;
-    return (
-      <>
-        <Header />
-        <div data-testid="page-favorites">
-          <MusicCard allMusics={ songs } />
-        </div>
-      </>
-    );
-  };
-
   render() {
-    const { isLoading } = this.state;
+    const { isLoading, songs } = this.state;
     return (
       isLoading
         ? <Loading />
-        : this.returnFavorites()
+        : (
+          <>
+            <Header />
+            <div data-testid="page-favorites">
+              <MusicCard allMusics={ songs } />
+            </div>
+          </>
+        )
     );
   }
 }
