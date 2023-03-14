@@ -12,8 +12,8 @@ export default class MusicCard extends React.Component {
 
   async componentDidMount() {
     this.setState(() => ({ isLoading: true }));
-    const favoriteStorage = await getFavoriteSongs();
-    this.setState(() => ({ songs: [...favoriteStorage], isLoading: false }));
+    const songsStorage = await getFavoriteSongs();
+    this.setState(() => ({ songs: [...songsStorage], isLoading: false }));
   }
 
   // fHandleChange = async ({ target: { name } }) => {
@@ -40,7 +40,11 @@ export default class MusicCard extends React.Component {
   fHandleChange = async (music) => {
     this.setState((prev) => ({ isLoading: true, songs: [...prev.songs, music] }));
     await addSong(music);
-    this.setState(() => ({ isLoading: false }));
+    const songsStorage = await getFavoriteSongs();
+    this.setState((prev) => ({
+      isLoading: false,
+      songs: [...prev.songs, ...songsStorage],
+    }));
   };
 
   render() {
