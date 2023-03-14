@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Loading from '../pages/Loading';
 import { addSong, getFavoriteSongs, removeSong } from '../services/favoriteSongsAPI';
-import getMusics from '../services/musicsAPI';
 
 export default class MusicCard extends React.Component {
   state = {
@@ -59,7 +58,7 @@ export default class MusicCard extends React.Component {
     const { isLoading, songs } = this.state;
     return (
       isLoading
-        ? <span>Carregando...</span>
+        ? <Loading />
         : allMusics.filter((music) => music.trackId)
           .map((music) => {
             const isChecked = songs.some((m) => music.trackId === m.trackId);
