@@ -10,11 +10,11 @@ export default class MusicCard extends React.Component {
     songs: [],
   };
 
-  // async componentDidMount() {
-  //   this.setState(() => ({ isLoading: true }));
-  //   const favoriteStorage = await getFavoriteSongs();
-  //   this.setState(() => ({ favoriteSongs: [...favoriteStorage], isLoading: false }));
-  // }
+  async componentDidMount() {
+    this.setState(() => ({ isLoading: true }));
+    const favoriteStorage = await getFavoriteSongs();
+    this.setState(() => ({ songs: [...favoriteStorage], isLoading: false }));
+  }
 
   // fHandleChange = async ({ target: { name } }) => {
   //   const { favoriteSongs } = this.state;
