@@ -2,6 +2,7 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import { createUser } from '../services/userAPI';
 import Loading from './Loading';
+import './css/Login.css';
 
 const INPUT_LENGTH = 3;
 
@@ -27,13 +28,15 @@ export default class Login extends React.Component {
     const { inputText, access, isLoading } = this.state;
 
     return (
-      <div data-testid="page-login">
+      <div data-testid="page-login" className="page-login">
         <form onSubmit={ (e) => { e.preventDefault(); } }>
           <input
             type="text"
             data-testid="login-name-input"
             value={ inputText }
             onChange={ this.fHandleChange }
+            id="login-name-input"
+            placeholder="Digite seu nome."
           />
           <button
             data-testid="login-submit-button"

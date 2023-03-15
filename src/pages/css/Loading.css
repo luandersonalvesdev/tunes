@@ -1,0 +1,8 @@
+/* stylelint-disable */
+@import './colors.css';
+
+span {
+  font-family: var(--fontF);
+  margin: 10px;
+  font-weight: 600;
+}

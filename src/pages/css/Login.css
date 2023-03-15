@@ -1,0 +1,66 @@
+/* stylelint-disable */
+@import './colors.css';
+
+.page-login {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--main);
+  color: var(--white-black);
+}
+
+.page-login form {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-login form input {
+  border: 0px;
+  font-size: 1.5rem;
+  border-bottom: 1px solid var(--accent1);
+  background-color: transparent;
+  margin-bottom: 20px;
+  margin-top: 5px;
+  opacity: 0.9;
+  color: var(--white-black);
+  /* opacity: 0.9; */
+}
+
+.page-login form input:focus {
+  outline: 0;
+}
+
+.page-login form button {
+  font-size: 1.3rem;
+  font-family: var(--fontF);
+  height: 50px;
+  border-radius: 2px;
+  background-color: transparent;
+  border: 1px solid var(--white-black);
+  cursor: pointer;
+  color: var(--white-black);
+  transition-duration: 0.3s;
+  opacity: 0.9;
+  font-weight: 600; 
+}
+
+.page-login form button:hover {
+  background-color: var(--accent1);
+  border: 1px solid var(--accent1);
+  color: var(--black-white);
+  transition-duration: 0.3s;
+}
+
+.page-login form button:disabled {
+  opacity: 0.2;
+  cursor: default;
+}
+
+.page-login form button:disabled:hover {
+  border: 1px solid var(--white-black);
+  color: var(--white-black);
+  background-color: transparent;
+}

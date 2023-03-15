@@ -1,0 +1,13 @@
+/* stylelint-disable */
+body {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  font-family: 'Raleway', sans-serif;
+}
+
+#root {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
