@@ -2,7 +2,7 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import { createUser } from '../services/userAPI';
 import Loading from './Loading';
-import './css/Login.css';
+import '../css/Login.css';
 
 const INPUT_LENGTH = 3;
 
@@ -10,7 +10,6 @@ export default class Login extends React.Component {
   state = {
     inputText: '',
     access: '',
-    // isLoading: true,
   };
 
   fHandleChange = ({ target }) => {
@@ -37,6 +36,7 @@ export default class Login extends React.Component {
             onChange={ this.fHandleChange }
             id="login-name-input"
             placeholder="Digite seu nome."
+            maxLength={ 11 }
           />
           <button
             data-testid="login-submit-button"

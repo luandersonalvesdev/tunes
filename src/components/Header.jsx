@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { getUser } from '../services/userAPI';
+import '../css/Header.css';
+import '../css/colors.css';
 
 export default class Header extends React.Component {
   state = {
@@ -15,6 +17,16 @@ export default class Header extends React.Component {
 
   render() {
     const { isLoading, nameUser } = this.state;
+
+    const linkStyle = {
+      margin: '1rem',
+      textDecoration: 'none',
+      color: 'white',
+      // padding: '10px',
+      fontSize: '1.2rem',
+      fontWeight: '600',
+    };
+
     return (
       <header data-testid="header-component">
         <ul>
@@ -22,6 +34,7 @@ export default class Header extends React.Component {
             <Link
               to="/search"
               data-testid="link-to-search"
+              style={ linkStyle }
             >
               Procurar
             </Link>
@@ -30,6 +43,7 @@ export default class Header extends React.Component {
             <Link
               to="/favorites"
               data-testid="link-to-favorites"
+              style={ linkStyle }
             >
               Favoritos
             </Link>
@@ -38,6 +52,7 @@ export default class Header extends React.Component {
             <Link
               to="/profile"
               data-testid="link-to-profile"
+              style={ linkStyle }
             >
               Perfil
             </Link>
