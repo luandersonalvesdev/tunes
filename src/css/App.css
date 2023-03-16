@@ -1,9 +1,12 @@
 /* stylelint-disable */
+@import './colors.css';
+
 body {
   align-items: center;
   display: flex;
   justify-content: center;
   font-family: 'Raleway', sans-serif;
+  background-color: var(--accent2);
 }
 
 #root {

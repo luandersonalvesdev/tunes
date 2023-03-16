@@ -1,0 +1,96 @@
+/* stylelint-disable */
+@import './colors.css';
+
+#div-main-search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--fontF);
+  width: 90%;
+}
+
+#div-main-search form {
+  margin: 50px 0px;
+  display: flex;
+  align-items: center;
+}
+
+#div-main-search form input {
+  font-family: var(--fontF);
+  font-size: 1.1rem;
+  border: 1px solid var(--gray1);
+  border-radius: 5px;
+  padding: 4px 7px;
+  background-color: transparent;
+  opacity: 0.9;
+  color: var(--black-white);
+  outline: 4px solid var(--accent4);
+  margin-right: 10px;
+  opacity: 0.6;
+  transition-duration: 0.3s;
+  font-weight: 600;
+}
+
+#div-main-search form input:focus {
+  opacity: 1;
+  transition-duration: 0.3s;
+}
+
+#div-main-search form button {
+  font-family: var(--fontF);
+  background-color: transparent;
+  border: 1px solid var(--accent5);
+  color: var(--black-white);
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition-duration: 0.3s;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+#div-main-search form button:hover {
+  background-color: var(--accent5);
+  color: var(--white-black);
+  transition-duration: 0.3s;
+}
+
+
+#div-main-search form button:disabled {
+  opacity: 0.3;
+  cursor: default;
+  border: 1px solid var(--gray1);
+}
+
+#div-main-search form button:disabled:hover {
+  background-color: transparent;
+  color: var(--black-white);
+}
+
+#div-main-search #span-notFound {
+  opacity: 0.5;
+  font-size: 2rem;
+  text-align: center;
+}
+
+#div-main-search #span-found {
+  opacity: 0.7;
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+}
+
+#div-main-search #span-artist {
+  font-size: 1.6rem;
+  color: var(--accent5);
+}
+
+#div-main-search #section-allAlbums {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  flex-wrap: wrap;
+  /* background-color: red; */
+  padding: 0px 20px;
+}

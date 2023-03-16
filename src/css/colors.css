@@ -2,10 +2,13 @@
 :root {
   --main: #031022;
   --accent1: #CCFF66;
-  --accent2: #DAE0F2;
+  --accent2: #f7f8ff;
   --accent2-opacity: #dae0f27c;
   --accent3: #F9CFF2;
+  --accent4: #799bff96;
+  --accent5: #2a51c5;
   --white-black: #FFF;
   --black-white: #000;
   --fontF: 'Raleway', sans-serif;
+  --gray1: #9e9e9e;
 }
