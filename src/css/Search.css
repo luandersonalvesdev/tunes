@@ -22,12 +22,10 @@
   border: 1px solid var(--gray1);
   border-radius: 5px;
   padding: 4px 7px;
-  background-color: transparent;
-  opacity: 0.9;
   color: var(--black-white);
-  outline: 4px solid var(--accent4);
+  outline: 4px solid var(--accent1);
   margin-right: 10px;
-  opacity: 0.6;
+  opacity: 0.8;
   transition-duration: 0.3s;
   font-weight: 600;
 }
@@ -40,8 +38,8 @@
 #div-main-search form button {
   font-family: var(--fontF);
   background-color: transparent;
-  border: 1px solid var(--accent5);
-  color: var(--black-white);
+  border: 1px solid var(--accent1);
+  color: var(--white-black);
   border-radius: 10px;
   padding: 10px 20px;
   cursor: pointer;
@@ -51,8 +49,8 @@
 }
 
 #div-main-search form button:hover {
-  background-color: var(--accent5);
-  color: var(--white-black);
+  background-color: var(--accent1);
+  color: var(--black-white);
   transition-duration: 0.3s;
 }
 
@@ -65,19 +63,24 @@
 
 #div-main-search form button:disabled:hover {
   background-color: transparent;
-  color: var(--black-white);
+  color: var(--white-black);
+}
+
+#div-main-search span {
+  color: var(--white-black);
 }
 
 #div-main-search #span-notFound {
-  opacity: 0.5;
+  opacity: 0.8;
   font-size: 2rem;
   text-align: center;
 }
 
 #div-main-search #span-found {
-  opacity: 0.7;
+  opacity: 0.9;
   font-size: 1.5rem;
-  margin-bottom: 30px;
+  margin-bottom: 50px;
+  text-align: center;
 }
 
 #div-main-search #span-artist {
@@ -88,9 +91,66 @@
 #div-main-search #section-allAlbums {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   width: 100%;
   flex-wrap: wrap;
-  /* background-color: red; */
   padding: 0px 20px;
+}
+
+#div-main-search #section-allAlbums #album {
+  width: 200px;
+  height: 220px;
+  background-color: var(--white-black);
+  box-shadow: 0px 0px 4px var(--gray1);
+  border-radius: 5px;
+  margin: 0 10px 30px 10px;
+  color: var(--black-white);
+  outline: 2px solid var(--white-black);
+  transition-duration: 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+
+#div-main-search #section-allAlbums #album #album-header {
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#div-main-search #section-allAlbums #album #album-header img {
+  width: 300px;
+  height: 300px;
+  filter: blur(5px);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+#div-main-search #section-allAlbums #album #main-img {
+  position: absolute;
+  filter: blur(0px);
+  bottom: 50px;
+  top: 0;
+  left: 15px;
+  margin: auto;
+}
+#div-main-search #section-allAlbums #album:hover {
+  scale: 1.01;
+  transition-duration: 0.2s;
+  box-shadow: 0px 0px 7px var(--gray3);
+
+}
+
+#div-main-search #section-allAlbums #album p:nth-child(3) {
+  font-size: 1.2rem;
+  margin: 50px 15px 0px 15px;
+}
+
+#div-main-search #section-allAlbums #album p:nth-child(4) {
+  font-size: 0.7rem;
+  margin: 0 15px 0px 15px;
 }

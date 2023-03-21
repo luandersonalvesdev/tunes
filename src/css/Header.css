@@ -6,7 +6,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--main);
+  background-color: var(--main2);
   color: var(--white-black);
   height: 80px;
   font-size: 100%;

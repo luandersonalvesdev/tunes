@@ -4,6 +4,14 @@ import { getUser } from '../services/userAPI';
 import '../css/Header.css';
 import '../css/colors.css';
 
+const linkStyle = {
+  margin: '1rem',
+  textDecoration: 'none',
+  color: 'white',
+  fontSize: '1.2rem',
+  fontWeight: '600',
+};
+
 export default class Header extends React.Component {
   state = {
     nameUser: '',
@@ -17,15 +25,6 @@ export default class Header extends React.Component {
 
   render() {
     const { isLoading, nameUser } = this.state;
-
-    const linkStyle = {
-      margin: '1rem',
-      textDecoration: 'none',
-      color: 'white',
-      // padding: '10px',
-      fontSize: '1.2rem',
-      fontWeight: '600',
-    };
 
     return (
       <header data-testid="header-component">

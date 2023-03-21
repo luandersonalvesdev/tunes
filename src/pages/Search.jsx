@@ -8,59 +8,17 @@ import '../css/Search.css';
 
 const INPUT_LENGTH = 2;
 
+const linkStyle = {
+  textDecoration: 'none',
+  fontWeight: '600',
+};
+
 export default class Search extends React.Component {
   state = {
     inputValue: '',
     search: false,
     artist: '',
   };
-
-  // fReturnContainerAlbums = (searchAlbums) => {
-  //   const { artist } = this.state;
-  //   return (
-  //     <>
-  //       <span>
-  //         Resultado de álbuns de:
-  //         {` ${artist}`}
-  //       </span>
-  //       <section>
-  //         {
-  //           searchAlbums.map((album) => (
-  //             <Link
-  //               data-testid={ `link-to-album-${album.collectionId}` }
-  //               to={ `/album/${album.collectionId}` }
-  //               key={ album.collectionId }
-  //             >
-  //               <p>{album.artistName}</p>
-  //               <p>{album.collectionName}</p>
-  //               <p>{album.trackCount}</p>
-  //             </Link>
-  //           ))
-  //         }
-  //       </section>
-  //     </>
-  //   );
-  // };
-
-  // fReturnForm = () => {
-  //   const { inputValue } = this.state;
-  //   return (
-  //     <form onSubmit={ (e) => { e.preventDefault(); } }>
-  //       <input
-  //         data-testid="search-artist-input"
-  //         type="text"
-  //         value={ inputValue }
-  //         onChange={ this.fHandleChange }
-  //       />
-  //       <button
-  //         data-testid="search-artist-button"
-  //         disabled={ inputValue.length < INPUT_LENGTH }
-  //         onClick={ () => { this.fSearch(inputValue); } }
-  //       >
-  //         Pesquisar
-  //       </button>
-  //     </form>);
-  // };
 
   fHandleChange = ({ target }) => {
     const { value } = target;
@@ -69,7 +27,7 @@ export default class Search extends React.Component {
 
   fSearch = async (inpValue) => {
     const { inputValue } = this.state;
-    this.setState(() => ({ inputValue: '', isLoading: true, artist: inputValue }));
+    this.setState(() => ({ isLoading: true, artist: inputValue }));
     const data = await searchAlbumsAPI(inpValue);
     this.setState(() => ({
       isLoading: false,
@@ -80,6 +38,7 @@ export default class Search extends React.Component {
 
   render() {
     const { isLoading, searchAlbums, search, inputValue, artist } = this.state;
+    console.log(searchAlbums);
     return (
       <>
         <Header />
@@ -123,10 +82,16 @@ export default class Search extends React.Component {
                             data-testid={ `link-to-album-${album.collectionId}` }
                             to={ `/album/${album.collectionId}` }
                             key={ album.collectionId }
+                            style={ linkStyle }
                           >
-                            <p>{album.artistName}</p>
-                            <p>{album.collectionName}</p>
-                            <p>{album.trackCount}</p>
+                            <div id="album">
+                              <div id="album-header">
+                                <img src={ album.artworkUrl100 } alt="" />
+                              </div>
+                              <img id="main-img" src={ album.artworkUrl100 } alt="" />
+                              <p>{album.artistName}</p>
+                              <p>{album.collectionName}</p>
+                            </div>
                           </Link>
                         ))
                       }
