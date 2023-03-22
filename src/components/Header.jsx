@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { getUser } from '../services/userAPI';
+import Logo from './Logo';
 import '../css/Header.css';
 import '../css/colors.css';
 
@@ -28,6 +29,7 @@ export default class Header extends React.Component {
 
     return (
       <header data-testid="header-component">
+        <Logo />
         <ul>
           <li>
             <Link

@@ -12,6 +12,13 @@ header {
   font-size: 100%;
 }
 
+header h6 {
+  position: relative;
+  margin-left: 30px;
+  font-size: 2.2rem;
+  padding: 2px 5px;
+}
+
 header ul {
   color: var(--white-black);
   display: flex;
@@ -39,4 +46,5 @@ header span {
   margin: 10px;
   padding: 3px 10px;
   opacity: 0.95;
+  margin-right: 30px;
 }

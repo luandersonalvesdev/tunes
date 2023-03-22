@@ -3,11 +3,10 @@
 
 h6 {
   text-align: center;
-  width: 100px;
-  height: 100px;
+  padding: 5px 10px;
   border: 1px solid var(--accent1);
   top: 0px;
   font-size: 4rem;
-  font-family: 'Praise', sans-serif ;
+  font-family: 'Leckerli One', 'Praise', sans-serif ;
   position: absolute;
 }
