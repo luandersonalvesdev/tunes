@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom';
 import { createUser } from '../services/userAPI';
 import Loading from './Loading';
 import '../css/Login.css';
+import Logo from '../components/Logo';
 
 const INPUT_LENGTH = 3;
 
@@ -28,6 +29,7 @@ export default class Login extends React.Component {
 
     return (
       <div data-testid="page-login" className="page-login">
+        <Logo />
         <form onSubmit={ (e) => { e.preventDefault(); } }>
           <input
             type="text"

@@ -1,5 +1,4 @@
 import React from 'react';
-// import FormSearch from '../components/FormSearch';
 import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import searchAlbumsAPI from '../services/searchAlbumsAPI';
@@ -38,7 +37,6 @@ export default class Search extends React.Component {
 
   render() {
     const { isLoading, searchAlbums, search, inputValue, artist } = this.state;
-    console.log(searchAlbums);
     return (
       <>
         <Header />
