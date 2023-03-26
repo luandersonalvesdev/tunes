@@ -52,3 +52,11 @@
   position: absolute;
   top: 75px;
 }
+
+.container-album .container-songs ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  color: var(--white-black);
+  list-style: none;
+}
