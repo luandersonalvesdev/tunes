@@ -45,21 +45,29 @@ export default class MusicCard extends React.Component {
             return (
               <li key={ music.trackId }>
                 <span>{music.trackName}</span>
-                <label data-testid={ `checkbox-music-${music.trackId}` }>
-                  <input
-                    type="checkbox"
-                    name={ music.trackId }
-                    onChange={ () => { this.fHandleChange(music); } }
-                    checked={ isChecked }
-                  />
-                  Favorita
-                </label>
+
                 <audio data-testid="audio-component" src={ music.previewUrl } controls>
                   <track kind="captions" />
                   O seu navegador não suporta o elemento
                   <code>audio</code>
                   .
                 </audio>
+
+                <label
+                  data-testid={ `checkbox-music-${music.trackId}` }
+                  className={ isChecked
+                    ? 'fa-solid fa-heart fa-lg'
+                    : 'fa-regular fa-heart fa-lg' }
+                  style={ { color: '#F9CFF2' } }
+                >
+                  <input
+                    type="checkbox"
+                    name={ music.trackId }
+                    onChange={ () => { this.fHandleChange(music); } }
+                    checked={ isChecked }
+                  />
+                </label>
+
               </li>
             );
           })

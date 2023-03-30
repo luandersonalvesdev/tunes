@@ -1,2 +1,34 @@
 /* stylelint-disable */
 @import './colors.css';
+
+li {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin-bottom: 20px;
+  max-width: 750px;
+  color: var(--white-black);
+  width: 100%;
+}
+
+li span {
+  font-size: 1.2rem;
+}
+
+li label {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: -50px;
+  padding: 10px;
+}
+
+li label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
