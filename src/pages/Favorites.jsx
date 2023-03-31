@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import MusicCard from '../components/MusicCard';
 import { getFavoriteSongs } from '../services/favoriteSongsAPI';
 import Loading from './Loading';
+import '../css/Favorites.css';
 
 export default class Favorites extends React.Component {
   state = {
@@ -29,7 +30,11 @@ export default class Favorites extends React.Component {
         : (
           <>
             <Header />
-            <div data-testid="page-favorites">
+            <span className="songs-fav">Músicas favoritas</span>
+            <div
+              data-testid="page-favorites"
+              className="container-favorites"
+            >
               <MusicCard allMusics={ songs } />
             </div>
           </>
