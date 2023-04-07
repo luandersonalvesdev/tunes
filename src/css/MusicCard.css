@@ -1,7 +1,7 @@
 /* stylelint-disable */
 @import './colors.css';
 
-.container-songs li {
+.li-music {
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-between;
@@ -13,11 +13,11 @@
   width: 100%;
 }
 
-li span {
+.li-music span {
   font-size: 1.2rem;
 }
 
-li label {
+.li-music label {
   cursor: pointer;
   position: absolute;
   top: 0;
@@ -25,7 +25,7 @@ li label {
   padding: 10px;
 }
 
-li label input {
+.li-music label input {
   position: absolute;
   opacity: 0;
   cursor: pointer;

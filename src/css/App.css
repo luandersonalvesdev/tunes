@@ -7,6 +7,7 @@ body {
   justify-content: center;
   font-family: 'Raleway', sans-serif;
   background-color: var(--main);
+  color: var(--white-black);
 }
 
 #root {

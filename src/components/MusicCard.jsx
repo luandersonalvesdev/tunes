@@ -43,7 +43,7 @@ export default class MusicCard extends React.Component {
           .map((music) => {
             const isChecked = songs.some((m) => music.trackId === m.trackId);
             return (
-              <li key={ music.trackId }>
+              <li className="li-music" key={ music.trackId }>
                 <span>{music.trackName}</span>
 
                 <audio data-testid="audio-component" src={ music.previewUrl } controls>
